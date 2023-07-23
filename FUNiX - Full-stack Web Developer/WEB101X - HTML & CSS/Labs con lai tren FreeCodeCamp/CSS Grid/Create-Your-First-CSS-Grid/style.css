@@ -1,0 +1,12 @@
+.d1{background:LightSkyBlue;}
+.d2{background:LightSalmon;}
+.d3{background:PaleTurquoise;}
+.d4{background:LightPink;}
+.d5{background:PaleGreen;}
+
+.container {
+  font-size: 40px;
+  width: 100%;
+  background: LightGray;
+    display: grid;
+}

@@ -1,0 +1,21 @@
+@media only screen and (max-width: 767px) {
+  .nav-items {
+    flex-direction: column;
+    border: none;
+  }
+
+  .nav-items a {
+    border: none;
+  }
+
+  .ava-nav {
+    display: none;
+  }
+
+  #border_left {
+    border-left: none;
+    border-top: 2px solid #d6c08d;
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+  }
+}

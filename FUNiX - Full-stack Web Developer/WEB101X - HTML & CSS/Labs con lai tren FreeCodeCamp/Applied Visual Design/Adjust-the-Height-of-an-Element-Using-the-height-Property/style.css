@@ -1,0 +1,21 @@
+h4 {
+    text-align: center;
+    height: 25px;
+  }
+  p {
+    text-align: justify;
+  }
+  .links {
+    margin-right: 20px;
+    text-align: left;
+  }
+  .fullCard {
+    width: 245px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+  }
+  .cardContent {
+    padding: 10px;
+  }

@@ -1,0 +1,8 @@
+.responsive-img {
+  height: auto;
+  max-width: 100%;
+}
+
+img {
+  width: 600px;
+}

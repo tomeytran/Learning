@@ -1,0 +1,117 @@
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+i {
+  color: #0387a4;
+  font-size: 1.25rem;
+}
+
+.bg-primary {
+  background-color: #0387a4 !important;
+}
+
+.bg-grey {
+  background: #e4e4e4;
+}
+
+/* ============== BANNER =============*/
+
+#banner img {
+  filter: brightness(50%);
+  object-fit: cover;
+  max-height: 500px;
+  min-height: 300px;
+}
+
+.banner-info {
+  left: 50%;
+  top: 8rem;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* ============== NAVBAR =============*/
+
+/*  w-100 d-flex justify-content-center border-bottom border-gray-300 */
+
+.nav-items {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: solid 1px #d0d0d0;
+}
+
+.nav-items a {
+  text-decoration: none;
+  padding: 1rem;
+  color: #333;
+  border: solid 1px #d0d0d0;
+}
+
+.ava-nav {
+  position: relative;
+  min-width: 200px;
+}
+
+.ava {
+  transform: translate(50%, -50%);
+  top: 50%;
+  left: -25%;
+  width: 150px;
+  height: 150px;
+  border: solid 10px white;
+
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+/* ============== ABOUT =============*/
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+/* ============== JOB INFO =============*/
+
+.job-name::before {
+  content: "";
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #0387a4;
+  top: 6px;
+  left: -15px;
+}
+
+.level-bar {
+  height: 2px;
+  width: 30px;
+}
+
+#border-_left {
+  border-left: solid 1px orange;
+}
+
+/* ============= PROJECTS =============*/
+
+tr {
+  border-top: 1px solid #d0d0d0;
+}
+
+td:first-child {
+  width: 50px;
+  font-weight: bold;
+}
+
+td {
+  border-top: 1px solid #d0d0d0;
+  padding: 20px;
+}

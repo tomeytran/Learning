@@ -1,0 +1,326 @@
+* {
+  margin: 0px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ======= BANNER ======*/
+
+.cv-banner-image img {
+  filter: brightness(50%);
+}
+
+#banner .cv-banner-info {
+  position: absolute;
+  left: 0%;
+  top: 30%;
+  right: 0%;
+  bottom: auto;
+  display: block;
+  text-align: center;
+  color: white;
+}
+
+/* ======= NAVBAR ======*/
+
+#nav-bar .container {
+  display: grid;
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  align-items: stretch;
+  text-align: center;
+}
+
+#nav-bar div {
+  border-left: solid 1px #c6c6c6;
+  border-right: solid 1px #c6c6c6;
+  width: 100%;
+  padding-top: 16px;
+}
+
+.container div a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #333;
+  align-self: center;
+}
+
+.container i {
+  color: #1042c0;
+}
+
+/* ======= ABOUT ======*/
+
+#about {
+  background: #f7f7f7;
+}
+
+#about .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: baseline;
+}
+
+#target {
+  padding: 40px;
+}
+
+#personal-info {
+  background-color: #ebe9e9;
+  padding: 40px;
+}
+
+#personal-info span {
+  font-weight: bold;
+}
+
+.section-title {
+  margin-bottom: 24px;
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.social-account {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+/* ======= JOB INFO ======*/
+
+#job-info .container {
+  display: grid;
+  max-width: 960px;
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+
+/* ======= Experience-Education-Activities ======*/
+.job-card {
+  padding: 40px 24px;
+  border-radius: 8px;
+  border: solid #ebe9e9 1px;
+}
+
+.job-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.job-title i {
+  font-size: 32px;
+  color: #8f8f8f;
+}
+
+.job-content {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.period {
+  margin-bottom: 12px;
+  margin-top: 8px;
+}
+
+.content-item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+
+.content-item i {
+  font-size: 20px;
+}
+
+.content-dot {
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #1042c0;
+  margin: 8px 10px 10px 0px;
+}
+
+.job-name {
+  font-weight: 600;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.period {
+  font-style: italic;
+}
+
+.present {
+  padding-left: 6px;
+  padding-right: 10px;
+  color: white;
+  background-color: #1042c0;
+  border-radius: 8px;
+}
+
+/* ======= Hobbies ======*/
+.content-item-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: solid 1px #1042c0;
+  margin-bottom: 8px;
+}
+
+.content-item-hobby {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+/* ======= Language-Skills ======*/
+.level {
+  margin-top: 16px;
+  display: flex;
+}
+
+.level-bar {
+  background-color: #1042c0;
+  border-radius: 16px;
+  height: 2px;
+  width: 30px;
+  margin-right: 8px;
+}
+
+/* ======= CERTIFICATE ======*/
+#certificate .container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  max-width: 960px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#certificate {
+  background: #f7f7f7;
+}
+
+.certificate-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* gap: 40px; */
+  margin-bottom: 40px;
+}
+
+.certificate-info li {
+  margin-bottom: 2px;
+}
+
+.certificate-item {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+}
+
+.certificate-img img {
+  max-width: 150px;
+}
+
+.certificate-title {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.certificate-bar {
+  background-color: orange;
+  border-radius: 16px;
+  height: 1px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* ======= PROJECTS ======*/
+#project .container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  max-width: 960px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.project-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  width: 100%;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  border: solid #ebe9e9 1px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.project-info span {
+  display: flex;
+  font-size: 14px;
+}
+
+.project-info {
+  display: flex;
+  padding: 12px;
+  gap: 20px;
+  border-top: solid 1px #ebe9e9;
+}
+
+/* ======= FOOTER ======*/
+
+#footer {
+  background: #f7f7f7;
+  padding: 40px;
+  justify-content: center;
+}
+
+#footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+#footer i {
+  font-size: 24px;
+}

@@ -1,0 +1,12 @@
+#left {
+    float: left;
+    width: 50%;
+  }
+  #right {
+    float: right;
+    width: 40%;
+  }
+  aside, section {
+    padding: 2px;
+    background-color: #ccc;
+  }
