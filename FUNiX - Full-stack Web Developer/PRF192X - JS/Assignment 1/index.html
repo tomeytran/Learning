@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet App</title>
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+      integrity="sha512-Oy+sz5W86PK0ZIkawrG0iv7XwWhYecM3exvUtMKNJMekGFJtVAhibhRPTpmyTj8+lJCkmWfnpxKgT2OopquBHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      table .bi-check-circle-fill {
+        color: green;
+      }
+
+      table .bi-x-circle-fill {
+        color: red;
+      }
+
+      table .btn.btn-danger {
+        font-size: 14px;
+      }
+    </style>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar Holder -->
+      <nav id="sidebar" class="active">
+        <div class="sidebar-header" id="sidebar-title">
+          <h3><i class="bi bi-envelope-paper-heart-fill"></i> Pet App</h3>
+          <strong><i class="bi bi-list"></i></strong>
+        </div>
+
+        <ul class="list-unstyled components">
+          <li class="active">
+            <a href="#">
+              <i class="bi bi-house"></i>
+              Home
+            </a>
+          </li>
+          <li class="">
+            <a href="#">
+              <i class="bi bi-file-earmark-person"></i>
+              About
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Page Content Holder -->
+      <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Pet Management</a>
+          </div>
+        </nav>
+        <div class="container" id="main">
+          <div class="row justify-content-center align-items-center mt-4">
+            <div class="col-lg-6 col-lg-offset-4">
+              <form>
+                <div class="form-group row mb-3">
+                  <label for="input-id" class="col-sm-3 col-form-label"
+                    >Pet ID</label
+                  >
+                  <div class="col-sm-9">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="input-id"
+                      placeholder="Input ID"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row mb-3">
+                  <label for="input-name" class="col-sm-3 col-form-label"
+                    >Pet Name</label
+                  >
+                  <div class="col-sm-5">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="input-name"
+                      placeholder="Input Name"
+                    />
+                  </div>
+                  <label
+                    for="input-age"
+                    class="col-sm-1 col-form-label"
+                    style="text-align: right"
+                    >Age</label
+                  >
+                  <div class="col-sm-3">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="input-age"
+                      placeholder="Input Age"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row mb-3">
+                  <label for="input-type" class="col-sm-3 col-form-label"
+                    >Type</label
+                  >
+                  <div class="col-sm-9">
+                    <select class="form-control" id="input-type">
+                      <option>Select Type</option>
+                      <option>Dog</option>
+                      <option>Cat</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row mb-3">
+                  <label for="input-weight" class="col-sm-3 col-form-label"
+                    >Weight</label
+                  >
+                  <div class="col-sm-3">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="input-weight"
+                      placeholder="Input Weight"
+                    />
+                  </div>
+
+                  <label
+                    for="input-length"
+                    class="col-sm-3 col-form-label"
+                    style="text-align: right"
+                    >Length</label
+                  >
+                  <div class="col-sm-3">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="input-length"
+                      placeholder="Input Length"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row mb-3">
+                  <label class="col-sm-3 col-form-label">Color</label>
+                  <div class="col-sm-3">
+                    <input
+                      type="color"
+                      class="form-control"
+                      id="input-color-1"
+                    />
+                  </div>
+                  <label
+                    for="input-breed"
+                    class="col-sm-3 col-form-label"
+                    style="text-align: right"
+                    >Breed</label
+                  >
+                  <div class="col-sm-3">
+                    <select class="form-control" id="input-breed">
+                      <option>Select Breed</option>
+                      <option>Tabby</option>
+                      <option>Domestic Medium Hair</option>
+                      <option>Mixed Breed</option>
+                      <option>Domestic Short Hair</option>
+                      <option>Terrier</option>
+                      <option>Greyhound</option>
+                      <option>Persian</option>
+                      <option>Rottweiler</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row mb-3">
+                  <div class="col-sm-3"></div>
+                  <div class="custom-control custom-checkbox col-sm-3">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="input-vaccinated"
+                    />
+                    <label class="custom-control-label" for="input-vaccinated"
+                      >Vaccinated</label
+                    >
+                  </div>
+                  <div class="custom-control custom-checkbox col-sm-3">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="input-dewormed"
+                    />
+                    <label class="custom-control-label" for="input-dewormed"
+                      >Dewormed</label
+                    >
+                  </div>
+                  <div class="custom-control custom-checkbox col-sm-3">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="input-sterilized"
+                    />
+                    <label class="custom-control-label" for="input-sterilized"
+                      >Sterilized</label
+                    >
+                  </div>
+                </div>
+                <button type="button" class="btn btn-primary" id="submit-btn">
+                  Submit
+                </button>
+                <button type="button" class="btn btn-warning" id="healthy-btn">
+                  Show Healthy Pet
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="container" style="max-width: 90%">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Type</th>
+                <th scope="col">Weight</th>
+                <th scope="col">Length</th>
+                <th scope="col">Breed</th>
+                <th scope="col">Color</th>
+                <th scope="col">Vaccinated</th>
+                <th scope="col">Dewormed</th>
+                <th scope="col">Sterilized</th>
+                <th scope="col">Date Added</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+              <tr>
+                <th scope="row">P001</th>
+                <td>Tom</td>
+                <td>3</td>
+                <td>Cat</td>
+                <td>5 kg</td>
+                <td>50 cm</td>
+                <td>Tabby</td>
+                <td>
+                  <i class="bi bi-square-fill" style="color: red"></i>
+                </td>
+                <td><i class="bi bi-check-circle-fill"></i></td>
+                <td><i class="bi bi-check-circle-fill"></i></td>
+                <td><i class="bi bi-check-circle-fill"></i></td>
+                <td>01/03/2022</td>
+                <td>
+                  <button type="button" class="btn btn-danger">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">P002</th>
+                <td>Tyke</td>
+                <td>5</td>
+                <td>Dog</td>
+                <td>3 kg</td>
+                <td>40 cm</td>
+                <td>Mixed Breed</td>
+                <td>
+                  <i class="bi bi-square-fill" style="color: green"></i>
+                </td>
+                <td><i class="bi bi-x-circle-fill"></i></td>
+                <td><i class="bi bi-x-circle-fill"></i></td>
+                <td><i class="bi bi-x-circle-fill"></i></td>
+                <td>02/03/2022</td>
+                <td>
+                  <button type="button" class="btn btn-danger">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // Toggle class active when click on navbar
+      const sidebarTitleEl = document.getElementById("sidebar-title");
+      const sidebarEl = document.getElementById("sidebar");
+      sidebarTitleEl.addEventListener("click", function () {
+        sidebarEl.classList.toggle("active");
+      });
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>
