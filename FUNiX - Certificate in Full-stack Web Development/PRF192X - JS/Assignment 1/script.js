@@ -12,6 +12,11 @@ const vaccinatedInput = document.getElementById("input-vaccinated");
 const dewormedInput = document.getElementById("input-dewormed");
 const sterilizedInput = document.getElementById("input-sterilized");
 
+// 8. Hiển thị các thú cưng khỏe mạnh
+const healthyPetArr = [];
+const healthyBtn = document.getElementById("healthy-btn");
+let healthyCheck = false;
+
 // 4a. Tạo array để lưu info
 const petArr = [];
 const tableBodyEl = document.getElementById("tbody");
@@ -137,4 +142,25 @@ function deletePet(petId) {
     }
   }
   renderTableData();
+}
+
+// 8. Hiển thị các thú cưng khỏe mạnh
+
+for (let i = 0; i < petArr.length; i++) {
+  function checkHealthy(petArr) {
+    return petArr[i].vaccinated && petArr[i].dewormed && petArr[i].sterilized;
+  }
+
+  healthyBtn.addEventListener("click", function () {
+    // petTable.innerHTML = "";
+    if (healthyCheck) {
+      healthyBtn.textContent = "Show Healthy Pet";
+      renderTableData(petArr);
+    } else {
+      healthyBtn.textContent = "Show All Pet";
+      healthyPetArr = petArr.filter();
+      renderTableData(healthyPetArr);
+    }
+    healthyCheck = !healthyCheck;
+  });
 }
