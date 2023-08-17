@@ -12,14 +12,15 @@ const vaccinatedInput = document.getElementById("input-vaccinated");
 const dewormedInput = document.getElementById("input-dewormed");
 const sterilizedInput = document.getElementById("input-sterilized");
 
-const submitBtn = document.getElementById("submit-btn");
 const petArr = [];
 const tableBodyEl = document.getElementById("tbody");
 const deleteBtn = document.querySelectorAll("btn-danger");
-
+/* SUBMIT */
+const submitBtn = document.getElementById("submit-btn");
+/* SHOW PET */
 let healthyCheck = true;
 const healthyBtn = document.getElementById("healthy-btn");
-
+/* CALCULATE BMI */
 const bmiBtn = document.getElementById("bmi-btn");
 
 /* SUBMIT */
@@ -47,7 +48,7 @@ submitBtn.addEventListener("click", function () {
     renderTableData(petArr);
     clearInput();
   }
-}); // OK
+});
 
 function validateData(data) {
   let isValidated = true;
@@ -106,40 +107,7 @@ function validateData(data) {
   }
 
   return isValidated;
-} // OK
-
-// function validateData- bản gốc
-// for (let i = 0; i < petArr.length; i++) {
-//   if (data.id === petArr[i].id) {
-//     alert("ID must be unique!");
-//     return;
-//   }
-// }
-// if (
-//   data.id == "" ||
-//   data.name == "" ||
-//   !data.age ||
-//   !data.weight ||
-//   !data.lengthData
-// ) {
-//   alert("Fill in the blank");
-// } else if (data.age < 1 || data.age > 15) {
-//   alert("Age must be between 1 and 15!");
-// } else if (data.weight < 1 || data.weight > 15) {
-//   alert("Weight must be between 1 and 15!");
-// } else if (data.lengthData < 1 || data.lengthData > 100) {
-//   alert("Length must be between 1 and 100!");
-// } else if (data.type == "Select Type") {
-//   alert("Please select Type!");
-// } else if (data.breed == "Select Breed") {
-//   alert("Please select Breed!");
-// } else {
-//   // 4b. Đẩy info vào array
-//   petArr.push(data);
-//   renderTableData(petArr);
-//   clearInput();
-//   return;
-// }
+}
 
 function renderTableData(petArr) {
   tableBodyEl.innerHTML = "";
@@ -181,7 +149,7 @@ function renderTableData(petArr) {
       `;
     tableBodyEl.appendChild(row);
   }
-} // OK
+}
 
 function clearInput() {
   idInput.value = "";
@@ -195,7 +163,7 @@ function clearInput() {
   vaccinatedInput.checked = false;
   dewormedInput.checked = false;
   sterilizedInput.checked = false;
-} // OK
+}
 
 function deletePet(petId) {
   const isDeleted = confirm("Are you sure?");
@@ -209,7 +177,7 @@ function deletePet(petId) {
     }
   }
   renderTableData(petArr);
-} // OK
+}
 
 /* SHOW PET */
 healthyBtn.addEventListener("click", function () {
@@ -230,7 +198,7 @@ healthyBtn.addEventListener("click", function () {
     healthyBtn.textContent = "Show Healthy Pet";
     healthyCheck = true;
   }
-}); // OK
+});
 
 /* CALCULATE BMI */
 bmiBtn.addEventListener("click", function () {
@@ -241,4 +209,4 @@ bmiBtn.addEventListener("click", function () {
         : ((petArr[i].weight * 886) / petArr[i].lengthData ** 2).toFixed(2);
   }
   renderTableData(petArr);
-}); // OK
+});
