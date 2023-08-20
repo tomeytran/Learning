@@ -2,7 +2,496 @@ This course is all about HTML & CSS and based on the Udemy Course below:
 
 https://udemy.com/certificate/UC-4fa4ef7a-2fb4-4065-a071-5bb278c7335a/
 
-Labs and Assignments are designed to apply learnings
+Labs and Assignments are designed to apply learning, below is my course note (really messy):
+
+
+## Basics
+
+- **HTML basics**
+    
+    1 element = Opening tag + Content/Child element + Closing tag 
+    
+    - *119 types of elements*
+    - *Có loại ko có content hoặc tự đóng như `<br>, <embed>, <img src="x.gif" />`*
+    - `index.html` =  default name of 1st page every web
+    - `<!DOCTYPE html>` = Đánh dấu đây là văn bản HTML
+    - `lang=”en”` → set up language
+    - `<head>` → invisible, như title, link CSS…
+        - `<meta charset=UTF-8” />` → setup character & meta data
+        - `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+            - `width=device-width` part sets the width of the page to follow the screen-width of the device
+            - `initial-scale=1.0` part sets the initial zoom level when the page is first loaded by the browser.
+    - `<body>` → visible
+    
+    `<hr>`
+    
+    - horizontal line (divider)
+    - like `<br>` to break
+- Emphasize
+    - Comment `<!-- -->`
+    - Bold `<b>` → no meaning
+        - `<strong>` → standout meaning
+    - Italic `<i>` → no meaning
+        - `<em>` → emphasized meaning
+- Semantic
+    
+    (Descriptive) tags for SEO 
+    
+    - Xưa: *****`<div id="nav"> <div class="header"> <div id="footer">`*
+        - `div` hay `span`  → no meaning
+    - Nay *`main, header, footer, nav, video, article, section…`*
+        - Bản chất ko khác gì div nhưng giúp dễ đọc hơn, SEO & Accessibility
+        - `nav` có thể là `section`
+        - `header` ko được nằm trong `footer`
+            - <main> giữa header & footer
+            - 1 page chỉ 1 main
+        - `<aside>` → sidebar menu
+    - Structure
+    
+    ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled.png)
+    
+- List
+    - `<ol>` (ordered list 1-2-3…)
+    - `<ul>` (unordered list)
+    - List item `<li>`
+    - List item = child element of List
+    - Others: description `<dl>,` defined term `<dt>`, described term `<dd>`
+- Image
+    
+    <img src=””>
+    
+    - Alternative `<img src=”” alt=””>` ⇒ accessibility
+    - Ngoài ra còn `<map>, <area>, <picture>`
+- Link
+    
+    (anchor, or hyperlink) `<a>` 
+    
+    - Attribute (hyper reference) `href=””`
+        
+        → bản chất là ghi chú cho tag *như src=”” trong <img>*
+        
+    - External: `href=“https//…”`
+        - Attribute open new tab `target="_blank”`
+        - *VD* `<a href="#footer" target="_blank">`
+    - Internal: `href=“#…”`
+        - Attribute của cái được gọi: `id=””`
+        - *VD* `h2 id="contacts-header"` → `a href="#contacts-header"`
+    
+    <aside>
+    💡 Try link as email, image, button (`~~href~~ → onclick=””`) và gắn
+    
+    </aside>
+    
+- Style width & height
+    1. Attribute width: `<a width=”500”>`
+    2. Attribute CSS: `<a style=”width:500px”>`
+    
+    Ngoài ra còn `style=”float:left”` (đẩy ảnh sang trái phải của text)
+    
+    <aside>
+    👆 Specific Width + Auto height = scale by width
+    còn set % (not px) → responsive by site size
+    
+    </aside>
+    
+- Form
+    
+    `<input type="text">` or *radio, checkbox, submit, button*
+    
+    ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%201.png)
+    
+    - `<label>` mỗi`<input>` (kể cả Submit)
+    - Placeholder `<input type="text" **placeholder="type here"**>`
+    - Tạo form chứa input & label, **action** = điểm đến
+        
+        `<form **action**="URL"><input type="text" placeholder="Abc"></form>`
+        
+    - Bản chất type là phân biệt, ko có auto là “text”
+    - Thêm required ở cuối để **bắt buộc** `<input…**required**>`
+        - Ngoai ra con
+            
+            
+            | checked | Specifies that an input field should be pre-selected when the page loads (for type="checkbox" or type="radio") |
+            | --- | --- |
+            | disabled | Specifies that an input field should be disabled |
+            | max | Specifies the maximum value for an input field |
+            | maxlength | Specifies the maximum number of character for an input field |
+            | min | Specifies the minimum value for an input field |
+            | pattern | Specifies a regular expression to check the input value against |
+            | readonly | Specifies that an input field is read only (cannot be changed) |
+            | required | Specifies that an input field is required (must be filled out) |
+            | size | Specifies the width (in characters) of an input field |
+            | step | Specifies the legal number intervals for an input field |
+            | value | Specifies the default value for an input field |
+    - `<fieldset> & <legend>` → grouping set of choices with title = legend
+        
+        ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%202.png)
+        
+- Button
+    1. `<input type="button" value="Submit">`
+    2. `<button type="submit" value="Submit"> Submit </button>`
+        
+        type → `button, submit, reset`
+        
+    3. `<button accesskey="b">Important Button</butt` ⇒ hoặc accesskey trong <a> để screen reader dùng keyboard
+- Audio
+    
+    Controls = add feature like play, pause, mute, speed, download + support keyboard 
+    
+    → luu y con loai vs visuals, caption etc
+    
+    ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%203.png)
+    
+- Figure & figcaption
+    
+    figure: cover the media (img, audio,…)
+    
+    figcaption: caption of the media inside figcaption
+    
+    figcaption → visible
+    
+    alt text → invisible + accessible
+    
+- Tabindex
+    - Đánh thứ tự khi user bấm tab
+    `<div tabindex="1">` và 2-3-4-5…
+- Dropdown
+    
+    ```html
+    <select name="role" id="dropdown">
+                <option value=""></option>
+              </select>
+    ```
+    
+
+- ********************CSS basics********************
+    
+    3 types: Inline HTML tag, Internal HTML docs `<style>`, External file CSS
+    
+    → color, font-size/-family (monospace), border-color/-style/-width/-radius (px or %), background-color, padding/margin/padding -top/left/bottom/right
+    
+    - ******Nhớ “;”******
+    - Dùng link của gg font → `<******************link href=”...>` (trước `<style>`)**
+        - FAMILY_NAME = font chọn
+        - GENERIC_NAME = khi cái trên ko display
+        - Về sau đánh lại `font-family: tên font`
+    
+    `**[attr=’value’]**`
+    
+    - VD: [type=’radio’] {…}
+    - Style cho type of html tag
+    - **************************************************************************************Absolute vs Relative → px vs em**************************************************************************************
+- Class → like webflow
+    - Define class trong html → css “.”
+        
+        *VD: h2 class=”title” → .title {*
+        
+    - Combo class
+        
+        *******************VD: h2 class=”title large”*
+        
+        *VD2: p {font-size:22px} → article footer p {font-size: 8px}*
+        
+    - Khác ****************id “#” →**************** vd: #first-class{}
+    - Multi-class 1 style
+        
+        *VD: h1, h2, h3 {font-family: serif;}*
+        
+        <aside>
+        👆 Inline → !important → #id → .class or :pseudo-class → * (universal)
+        
+        </aside>
+        
+- Color
+    - RGB: Each color value = 0 → 255
+    - RGBA → add opacity. ********************VD 30%: **rgba**(244, 155, 6, **0.3**)*
+    - HEX: Each color value = 0-9, A-F
+        - Nếu là cặp số trong 6 ký tự thì chỉ cần gõ 1. ********VD: #016********
+    
+    `--penguin-skin: gray` trong `penguin{ }`
+    
+    ⇒ Gán và apply chỗ khác cũng **gray**: `background: var(--penguin-skin)`
+    
+    ⇒ Xong thêm **********black để backup nếu ko tìm đc set skin:gray trc đó**********
+    
+    `background: var(--penguin-skin, black);`
+    
+    <aside>
+    👆 background cx có thể set url(link j đó)
+    
+    </aside>
+    
+    - ******HSL******
+        - Hue: 0-360
+        - Saturation - amt of gray, 0-100%
+        - Lightness: white to black 0-100%
+- Root class
+    - Y như component figma, edit once change multiple
+    - Trong CSS là `:root`
+        - VD: `:root{--penguin-skin: **white**:}`
+        - Về sau vx override đc ví dụ .`penguin{--penguin-color: **gray**`
+    
+    ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%204.png)
+    
+- Pseudo class & element
+    
+    ************************Pseudo class************************ 
+    
+    `selector:pseudo-class`
+    
+    [Link](https://www.w3schools.com/css/css_pseudo_classes.asp)
+    
+    - Hover
+    - Active
+    - Visited
+    - Focus → input tag
+    - Target
+    
+    `p:first-child i {color: blue;}`
+    
+    `div:hover p{background: black;}`
+    
+    **********************************Quotation → `<q>`**
+    
+    **Pseudo element → CSS3**
+    
+    Ncl thêm các properties sau
+    
+    ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%205.png)
+    
+    → font, color, background, spacing, text, align, transform, height
+    
+- Box shadow
+    - `offset-x`  & `offset-y` như Figma
+    - `blur-radius`  & `spread-radius`  → optional
+    - `color`
+    - VD: `box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);`
+        - 0px horizontally x
+        - 10px vertically y
+        - 20px blur radius
+        - 0px spread distance
+        - Color
+- Revisision
+    
+    ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%206.png)
+    
+    ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%207.png)
+    
+- Text-transform
+    
+    → lowercase, uppercase, capitalize, initial (, inherit, none
+    
+
+line-height: 1.5, letter-spacing: -1px; list-style???
+
+- Position
+    - Relative - em, rem
+        
+        ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%208.png)
+        
+    - Absolute - px, push
+    - Fixed - px, not push
+- Linear, Transform
+    
+    `linear-gradient()` → `background: linear-gradient(35deg, #CCFFFF, #FFCCCC);`
+    
+    - transform: scale(X.Y) khi hover{} or skewX or skewY
+    
+    ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%209.png)
+    
+    transition: transform 0.2s ease-in
+    
+- Keyframe & Animation
+    
+    [freeCodeCamp.org](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-visual-direction-by-fading-an-element-from-left-to-right)
+    
+    - 8 properties
+    - `animation-name` sets the name of the animation
+    - used by `@keyframes` what happens within the animation over the duration
+    - `animation-duration` sets the length of time
+    
+    ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%2010.png)
+    
+    → set name r theo do keyframes + name r set cac status luc 0-100%
+    
+    → muon giu cho ko bi reset = `animation-fill-mode: forwards;` ngay khi set animation name
+    
+    bngoai ra lam animation: move, rotate, color, position change
+    
+    `animation-iteration-count` → how many times for loop (1-infinite)
+    
+    `animation-timing-function` → giảm tốc ntn (ease, ease in, out, linear, **cubic-bezier**)
+    
+    ---
+    
+    ⇒ Advanced: **Bezier** curve: (x1, y1, x2, y2) → check doc “cubic bezier”
+    
+    `**animation-timing-function:** cubic-bezier(0.25, 0.25, 0.75, 0.75);`
+    
+- Boxes
+    - Block: next row, auto full width, can set width + height → <p><div>
+    - Inline: next “appropriate space”, can’t set width + height → <span>
+    
+    ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%2011.png)
+    
+    - Inline-block: can set width + height
+    
+    ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%2012.png)
+    
+- Border-sizing
+    - Content box: chỉ tính content và height or width của nó (trong cùng)
+    - Border-box: tính theo border kể cả padding (ko tính margin vì đâu có border)
+
+![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%2013.png)
+
+## ****************************************************************Layout with CSS Flexbox and Grid****************************************************************
+
+****************Flexbox:****************
+
+- Float → out dated, left to right vs Flexbox = autolayout
+    
+    ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%2014.png)
+    
+    - Clear & clear fix
+- Flex & flex-direction
+    - Column, row (default = row)
+    - Column/Row-reverse
+- Justify-content & align-items
+    
+    ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%2015.png)
+    
+    - justify-content
+    
+    ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%2016.png)
+    
+    - align-items
+    
+    ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%2017.png)
+    
+    - Trong Flex container la flex items, ngoài đống trên còn
+        - Cho Flex container
+            - flex-wrap: nowrap, wrap, wrap, reverse
+            - align-content: stretch, …(như align-items, khi có flex: wrap: wrap)
+        - Cho Flex items
+            - align-self: auto hoặc như align-item → tự align chính nó, tách khỏi container nhg vx ở trong container
+            - `flex-grow`
+            - flex-basis → làm mọi flex items một kích thước nào đó, vd 100px width nếu cái gì to hơn thì fix về 100px, bé hơn thì grow ra → nhg kp nó sẽ theo mà tuỳ setup container hoặc screen → dùng flex-shrink thì nó mới nguyên
+                - chia 5 ví dụ 2 cột trong flex div set cột trái `flex-basis: 40%`
+            - `flex-shrink` → kiểu như nowrap khi đặt trong flex mà bị wrap (phá constraint autolayout)
+            - order: 0/1/-1 (-1=first, 1=last)
+            - grid-column: 1 / -1
+            - el—4
+- **********Grid:**********
+    - Display: grid
+    - **grid lines**
+    - **grid min max, repeat, auto-fill, auto-fit**
+    - grid-template-column: 50px 50px 50px; ⇒ 3 cột 50px, tương tự vs row, thay các format: % rem em px auto
+        - `grid…: repeat(3, 1fr)` → repeat 3 times
+        
+        ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%2018.png)
+        
+    - Tương tự grid-row-gap, grid-column-gap, grid-gap (row r đến column)
+    - Trong grid các cell thường stretch → justify-self or align-self or all at once thi align-items…
+    - Define cac area (like labelling), sau đó thì vs các class chỉ việc gọi lại cái area cho nó nằm trong cell đã label, kiểu như bắt phải ngủ giường này
+    
+    ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%2019.png)
+    
+    Grid-area: kiểu như vẽ dựa theo định vị 2 số đầu 2 số sau vdu 1/1/2/4 là ở (giao ngang 1 dọc 1) vẽ area đến (giao ngang 2 dọc 4)
+    
+
+## ************************************************************Principles of building website************************************************************
+
+- Xét điều kiện nếu màn nhỏ hơn thì responsive + grid area
+    
+    ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%2020.png)
+    
+    ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%2021.png)
+    
+    ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%2022.png)
+    
+    - Media query → queries.css
+        
+        VD set <p> → font-size: 20px
+        
+        ⇒ if device height reach 800px → then font-size: 10px 
+        
+        ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%2023.png)
+        
+- Responsive image
+    - max-width: 100% → ảnh ko rộng quá 100% container
+    - height: auto → tự scale ratio
+    - background-size: auto, content, cover, fit
+    - **background-image: linear-gradient(x, y1, y2)**
+    - background-image: url(...);
+
+## ************************Responsive web design************************
+
+Element- > component → layout → page 
+
+Work on all browser
+
+- -ms: microsoft
+- -moz: mozilla
+- -webkit: chrom, safari
+
+Fluid layout = adapt to curent view pỏt → `%, vh, vw > px` and `max-width > width`
+
+Responsive → rem + imgae in max-width and % + media queries
+
+10px = 0.625rem = 62.5%
+
+### Components
+
+Modal, forms, tables, logo, steps, tabs, breadcrumbs, nav, footer, sidebar, pagination (dãy số), input, tags…→ like Figma
+
+### 7 steps to solve problems
+
+1. Define
+    1. About: what is all about = short brief
+        1. Who use: client
+        2. What for 
+            1. Business goal: *selling diet plan* 
+            2. User goal: *diet plan? → subscribe monthly 1 meal/day (action) =  eat well effortlessly without spending time (desired state)*
+        3. Target user: *busy but wealthy people, techgie*
+2. Plan 
+    1. Content
+        1. Need sitemap? 
+        2. Summary *→ ~mission & description of the business*
+        3. Features
+        4. *How it works, Benefits, Samples, Copies, Pricing, Contact…*
+        5. Links and layout requirements: *signup, login, ios app, android app, For enterprise, Hiring, Partnership, Press, Help center, Privacy and terms…*
+    2. Visual asset
+    3. Personality
+3. Structure and Sketch 
+    1. Page 1 = Home
+        1. Header
+        2. Hero
+        3. Featured
+        4. How it works 
+        5. Meals + Diets
+        6. Testimonials + Gallery
+        7. Pricing + Features
+        8. CTA
+        9. Footer
+    2. Page 2, 3, 4…
+    
+    ⇒ each section i, ii, iv… = 1 mood board with different layouts
+    
+    ⇒ combine & SKETCH ideas
+    
+    ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%2024.png)
+    
+4. CODE
+    1. Structure folder
+    2. Code layout (chú thích trong sketch)
+        1. Nhớ comment chia sections HTML + branding CSS
+            
+            ![Untitled](WEB101x%20-%20Build%20your%20first%20website%2030ff11bcca8542a6a32c1c20b077aa14/Untitled%2025.png)
+            
+
+### Bootstrap
+
+# Learn more
 
 
 
