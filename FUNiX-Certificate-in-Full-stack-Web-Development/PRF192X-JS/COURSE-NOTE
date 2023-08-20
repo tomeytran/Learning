@@ -1,0 +1,376 @@
+After learning some mindset for developer and basic HTML/CSS, I started learning JS
+Below is another messy course note:
+
+
+
+## ****Basic Javascript****
+
+### **Declare a var**
+
+`var myName;` → declare a variable called myName
+
+Overwrite:
+
+`var myName= "Tom";
+ var myName = "David";`
+
+`console.log(myName);` → David
+
+⇒ về sau bug rất khó tìm
+
+`let` sinh ra trong JS ES6 để set tạm thời 
+
+`const` -> read-only, fixed, uppercase
+
+`const FAV_PET = "Cats";
+FAV_PET = "Dogs";`
+
+⇒ console ra Error
+
+### **Store value to a var**
+
+`var myVar;
+myVar = 5;` →operation
+
+<aside>
+☝ `MYVAR` is not the same as `MyVar` nor `myvar`
+
+</aside>
+
+### **Assign value *cho var khác kể cả đã store***
+
+`var myVar;
+myVar = 5;
+var myNum;
+myNum = myVar;`
+
+### **Initialize a var *- vừa declare vừa store***
+
+`var myVar = 5;`
+
+`var a = 6;`
+
+Biến đổi data type: `var myVar = "678cat";`
+
+`"678cat"` is called a *string* *literal với “ “ or ‘  ‘*
+
+1 initialized var sẽ ko có value, hay đúng hơn là (initial) value `undefined`
+
+Khi cho operation thì value đó cho ra `NaN` → *Not a Number*
+
+### **Math**
+
+### So sánh hơn nhất
+
+`let x = Math.max(10,20) //tương tự min`
+
+### Làm tròn
+
+`let x = Math.roound(3.141526) // -> 3`
+
+`i++;` equals `i = i + 1;`
+
+`i--;` equals `i = i - 1;`
+
+`const myDecimal = 3.4;`
+
+17/2 dư 1 →  `17 % 2 = 1`
+
+Cả với string như “” + “” (nhớ spaces, ko cần chung “” tổng), tất nhiên cả mấy cái `+= /=`
+
+```
+const ourName = "freeCodeCamp";
+const ourStr = "Hello, our name is " + ourName + ", how are you?";
+
+**Hello, our name is freeCodeCamp, how are you?**
+```
+
+```
+const anAdjective = "awesome!";
+let ourStr = "freeCodeCamp is ";
+ourStr += anAdjective;
+
+**freeCodeCamp is awesome!**
+```
+
+### ********************Compound assignment (kết hợp overwrite)********************
+
+`let myVar = 1;
+myVar += 5;` equals `myVar = myVar + 5`
+
+⇒ console.log(myVar); ra 6
+
+tương tự với `-= *= /=` 
+
+### ************Quotes************
+
+`const myStr = "I am a \"double quoted\" string inside \"double quotes\".";`
+
+⇒ console.log(myStr) ra `I am a "double quoted" string inside "double quotes".`
+
+Tức trong string tổng là “” thì bên trong cx có “abc” thì phía trước là \ → \”abc\”
+
+Còn nếu string tổng là ‘ ‘ mà tỏng là “abc” thì ko cần \
+
+| Code | Ouput |
+| --- | --- |
+| \’ | single quote |
+| \” | double quote |
+| \\ | backlash |
+| \n | newline |
+| \t | tab |
+| \b | backspace |
+| \f  | form feed |
+
+`const myStr = "FirstLine\n\t\\SecondLine\nThirdLine";` cho ra:
+
+```jsx
+FirstLine
+    \SecondLine
+ThirdLine
+```
+
+### ****************************Length of String****************************
+
+`console.log("Alan Peter".length);` → 10 character
+
+```jsx
+let lastNameLength = 0;
+const lastName = "Lovelace";
+lastNameLength = lastName.length;
+console.log("lastName.length") -> 8
+```
+
+****Ký tự đầu tiên của string**** 
+
+`const firstLetter = lastname[0]` → console ra L trong Lovelace ***vì JS tính 0 là đầu not 1***
+
+<aside>
+☝ String đã tạo là fixed, *ví dụ tạo dòng mới đi ép `lastName[0] = “R”` là error*
+
+</aside>
+
+Ngoài ra làm math trong [ ]
+
+```
+const firstName = "Ada";
+const lastLetter = firstName[firstName.length - 1];
+```
+
+**Array - store nhiều value cùng []**
+
+`const myArray = ["Something", 2];`
+
+`const teams = [["Bulls", 23], ["White Sox", 45]];`
+
+**********************************************************Index value trong Array**********************************************************
+
+```jsx
+const array = [50, 60, 70];
+console.log(array[0]); -> 50
+const data = array[1]; -> 60
+
+or change variable:
+array[2] = 10
+-> array = [50, 60, 10]
+```
+
+Lấy vd ở trên: `const teams = [["Bulls", 23], ["White Sox", 45]];`
+
+`const teamWhiteSox = teams[1] -> ra "White Sox", 45
+const teamWhiteSox = teams[1][0] -> ra "White Sox"`   ⇒ ***************************ncl gọi sâu thì thêm số trong []***************************
+
+******Thêm value vào cuối Array cùng .push()******
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/57e8fd47-75d3-41ff-8aee-94063d592c27/Untitled.png)
+
+**Tách value cuối khỏi Array cùng .pop()**
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6bb677e8-3281-48c1-b21c-abecf25fc7a2/Untitled.png)
+
+****Tách value đầu khỏi Array cùng .shift()****
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2d374787-ca90-475d-9946-b3f8bd78d1e6/Untitled.png)
+
+******Thêm value vào đầu Array cùng .unshift()******
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/816001d3-9153-4cb4-a29b-9046508ef51e/Untitled.png)
+
+**Bỏ nhiều value cụ thể với .splice(0, 1, 2…)**
+
+Remove Orange and Apple from array
+
+`const fruits = ["Banana", "Orange", "Apple", "Kiwi"];
+fruits.splice(1, 2);`
+
+**Xếp array theo A-Z với .sort()**
+
+### **Function**
+
+Tạo input và mechanism là console, để khi replace value vào input thì sẽ theo mechanism đó
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7bd31697-181d-4ada-ad3b-79e12cbeda27/Untitled.png)
+
+Hoặc thay vì console trước thì cứ set math trong {} rồi ra ngoài set var mới console
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6358bf08-4138-4bbf-8bc6-fed841f1dab4/Untitled.png)
+
+**Arrow**
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8db97896-f889-47f9-bf9d-409f6d8cfaf4/Untitled.png)
+
+<aside>
+☝ Stuck: link https://docs.google.com/document/d/1SRXcNzp61sgBzS8Xa1e2tLPZ0kOFgPuvdH-sAtQeAuA/edit
+
+</aside>
+
+### **********Scope**********
+
+Web Dev Simplified: 4 types
+
+- Global
+- Module
+- Function
+- Block
+    
+    Scope: set of code that has variables are defined in and only accessible inside that scope
+    
+
+### ****************Boolean****************
+
+True or False
+
+`if (condition is true) {statement is executed}`
+
+******************If - Else******************
+
+**Operator**
+
+```jsx
+Equal
+1   == "1" // true
+1   ==  2  // false
+1 === "1" // false, strict equal
+Unequal
+1 !== 2 // true, strict unequal
+
+Compasison <, >, >=, <=
+
+Add logics &&
+num > 5 && num <= 10
+
+Or logics ||
+num > 5 || num < 2
+```
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/79d969d0-727b-4d2e-a942-777dc6c13573/Untitled.png)
+
+Xem them trong code folder Project: ************switch************
+
+Khi dùng `return` thì nên là dòng cuối, sau đó mà console.log sẽ k display
+
+************Object************
+
+```jsx
+const cat = {
+  "name": "Whiskers",
+  "legs": 4,
+  "tails": 1, //chu y dau ","
+  "enemies": ["Water", "Dogs"]
+};
+```
+
+`.hasOwnProperty()`
+
+```
+function checkForProperty(object, property) {
+  return object.hasOwnProperty(property);
+}
+```
+
+### ********Loop********
+
+`while` 
+
+`for (most common)`
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ef2518c8-2aa3-41c7-ae8a-3c6e6fb80504/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6bcd2227-8784-44b7-b04b-edf8a325b611/Untitled.png)
+
+=⇒ sau if này ví dụ còn console.log thì dùng `continue thay cho break để chạy nốt`
+
+**Recursion**
+
+https://www.youtube.com/watch?v=6oDQaB2one8
+
+https://www.youtube.com/watch?v=LteNqj4DFD8
+
+Random, Floor, 
+
+Convert to integer with `parseInt("string", base of binary system?)`
+
+https://forum.freecodecamp.org/t/freecodecamp-challenge-guide-use-recursion-to-create-a-range-of-numbers/301180
+
+### ES6
+
+**********************var vs let**********************
+
+- Var: globally, unless inside function = locally
+- Let: limited to when declare inside a bloc, statement, expression
+
+********************************Event (w3school)********************************
+
+`<button onclick = "alert(Hello)">Click me</button>`
+
+`"alert(Hello)"` can also be `"myFunction()"`
+
+`onclick` can also be `onmouseover`
+
+****************************DOM (w3school)****************************
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3fa72787-7fe8-4af2-9224-f1da34749717/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f4514691-e6dd-4724-9c7f-93de482add9f/Untitled.png)
+
+Chú ý “s” sau Element
+
+image → `.src = “_ .png”`
+
+style backgorund or color → `.style.color = “red”`
+
+display → `.style.display = "none"/"block"` 
+
+event → `document.getElementById("demo").addEventListener(" click ", myFunction);`
+
+**************************************************String method (w3schools)**************************************************
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/edd856b8-e3c9-425e-9792-a7b4d89d88e5/Untitled.png)
+
+Use the slice method to return the word "bananas".
+
+`let txt = "I can eat bananas all day";
+let x = txt.slice(, );`
+
+Use the correct String method to replace the word "Hello" with the word "Welcome".
+
+`let txt = "Hello World";
+txt = txt.("Hello", "Welcome");`
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/72303b1d-96b6-423a-930d-c0146e583447/Untitled.png)
+
+**************************************Alert today’s date**************************************
+
+`const d =newDate();
+alert(d);`
+
+Extract the year → `year = d.getFullYear();`
+
+Extract the month → `month = d.getMonth();`
+
+set the year to 2020 → `d.setFullYear(2020);`
+
+**********************************************Object Freeze********************************************** 
+
+`Object.freeze()` → stop change value even `const`
+ 
