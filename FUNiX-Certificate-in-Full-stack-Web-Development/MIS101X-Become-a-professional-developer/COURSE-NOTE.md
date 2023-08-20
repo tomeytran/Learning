@@ -1,12 +1,12 @@
 This course is all about mindset for aspiring developer that I've learned at first.
 It takes from how to prepare to be developer, teamwork, Git/Gitlab, a bit of Kanban, SDLC, UML Diagram and some guide for writing CV and interview prep.
 Most of the lectures are based on these Udemy Courses that I listed here:
-https://udemy.com/course/it-for-beginners
-https://udemy.com/course/teamwork
-https://udemy.com/course/introduction-to-git-for-gitlab-projects
-https://udemy.com/course/get-kanban-organised
-https://udemy.com/course/process-mapping-process-flowcharts
-https://udemy.com/course/uml-and-object-oriented-design-foundations
++ https://udemy.com/course/it-for-beginners
++ https://udemy.com/course/teamwork
++ https://udemy.com/course/introduction-to-git-for-gitlab-projects
++ https://udemy.com/course/get-kanban-organised
++ https://udemy.com/course/process-mapping-process-flowcharts
++ https://udemy.com/course/uml-and-object-oriented-design-foundations
 
 Below is my course note, include Vietnamese (really messy, I didn't try to capture all):
 
