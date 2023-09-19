@@ -8,12 +8,12 @@
     <title>Lab 8: Modal window</title>
   </head>
   <body>
-    <button class="show-modal">Show modal 1</button>
-    <button class="show-modal">Show modal 2</button>
-    <button class="show-modal">Show modal 3</button>
+    <button onclick="showModal()" class="show-modal">Show modal 1</button>
+    <button onclick="showModal()" class="show-modal">Show modal 2</button>
+    <button onclick="showModal()" class="show-modal">Show modal 3</button>
 
     <div class="modal hidden">
-      <button class="close-modal">&times;</button>
+      <button class="close-modal" onclick="closeModal()">&times;</button>
       <h1>I'm a modal window 😍</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -25,7 +25,7 @@
         mollit anim id est laborum.
       </p>
     </div>
-    <div class="overlay hidden"></div>
+    <div onclick="closeModal()" class="overlay hidden"></div>
 
     <script src="modal.js"></script>
   </body>
