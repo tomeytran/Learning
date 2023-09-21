@@ -1,1 +1,1 @@
-console.log("Nice");
+"use strict";
