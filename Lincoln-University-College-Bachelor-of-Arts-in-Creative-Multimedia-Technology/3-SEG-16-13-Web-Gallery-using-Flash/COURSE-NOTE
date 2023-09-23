@@ -1,0 +1,137 @@
+# Chap 1: Intro to web
+
+**Intro to web**
+
+Web 1.0
+
+- Read-only
+- Decentralized
+- World Wide web
+- 19991-2004
+- Staticpages
+- User = Consumer not Producer
+
+Web 2.0
+
+- “Web as platform”
+- “Participatory” centralized
+- User can Produce
+- Forum, social media, blog, wiki
+- 2004-now
+
+Web 3.0
+
+- No intermediary (middle man)
+- Decentralized
+- Real world communication
+- ML, AI, blockchain - understand what user want
+- No need to search lots of info or filter
+- Get the info straight
+- E.g: ChatGPT
+
+**What is Web**
+
+*A collection of related Web pages, images, videos or other digital assets that are addressed relative to a common Uniform Resource Locator (URL), often consisting of only the domain name, or the IP address, and the root path in an Internet Protocol-based network.*
+
+- *Basically a set of files, stored on the WWW*
+- *Hosted in 1+ web server*
+- *Accessible via the Internet (public) or private network, in the form of URL*
+- *Viewed with a browser like Chrome*
+- *Each website has a home page (main page)*
+- *The protocol called HTTP is used to load web pages when someone want to access with an URL*
+
+**4 types**
+
+1. Personal
+
+- Keep in touch
+- Seek jobs
+- Express himself
+
+2. Business
+
+- Promote
+- Publish (products or services to target audience)
+- No extra cost like printing media
+- Up to date
+
+3. Organizational
+
+- Government or non-profit org
+- Promote causes like edu, social issues, health
+- E.g: University webpage
+
+4. Entertainment
+
+**Internet**
+
+- Websites store information that is connected & shared
+- They have Internet protocol (IP) - a set of standards - to address and route data
+- Other protocol cannot easily link 1 doc to another like IP
+- Like from Google search results
+
+**Fundamentals of web**
+
+- HTML: describe how a page/text should be formatted
+- Web browser: to access web pages from web server, like Chrome
+- You use HTTP to make a request to access files that are stored in the web server, it will collect and assembles files from the servers into one page
+
+**Static vs Dynamic websites**
+
+- **Static:** coded in HTML, remain the same to different users or times, manually changed if needed
+- **Dynamic:** changed to different users or times, like news
+
+**History and Development**
+
+- 1989: Tim Berners-Lee invented WWW at CERN
+- First usage: *automated information-sharing between scientists in universities and institutes around the world...that used a hypertext process to link related documents over a network.*
+- 1992: only 50 servers; introduce NCSA Mosaic - the first graphical browser (no longer text-only)
+- Later: Web 2.0 and 3.0
+- 1994: Tim Berners-Lee founded W3C - a common standards for WWW, at MIT
+
+**Where to start, what web designer do**
+
+- Classes, projects, practice
+- Graphic design, UX design, doc markup, write, info architecture, PTS...
+
+**HTML Multimedia**
+
+- Sound, music, videos, movies, animations
+- Multimedia: text, color, fonts, images
+- Video format: mp4, webm, ogg -> supported by HTML
+- Video tag: <video>, <source>, <track>
+- Audio format: mp3, wav, ogg
+- Audio tag: <audio>, <source>
+- Plug-ins: <object> (Java applets, PDf reader, Flash player), <embed>, youtube <iframe>
+
+# Chap 2: Intro to Flash
+
+**Intro to Flash**
+
+- Flash can be used to create games, presentations, animations, visualizations, interactive apps
+- When animate with ActionScript, you need to know Flash well
+
+**History**
+
+- FutureWave company built styluses to draw on SmartSketch - a vector graphics program, and the program became popular on Windows and macOS, due to its **lightweightness & scalability**
+- Later they built FutureSplash Animator to add motion capabilities *=> you could author your content using this program and play back the content through a web browser using a plugin.*
+- CSS & JS did not exist yet, which means you have to install browser plugin to have rich media experience.
+- 1996: FlashPlayer extension was born to solve it (=Future + Splash), when Macromedia acquired FutureWave
+- Macromedia then built ActionScript, an OOP language
+- 2005: Adobe acquired Macromedia -> Animate
+
+**Why Flash (or Animate)?**
+
+- Scalable, Interactive
+- No programming skilled required
+- Easy to learn
+- Macromedia: "a competitor to HTML to build interactive web"
+- Vector-based
+- Faster loaded
+
+**Adobe Animate**
+
+- Panels to know: Stage, Tools, Timeline, Properties, Library, Assets
+- Learn more on Youtube
+
+#Chap 3-9: It's all about learning Adobe Animate, it'd be better to learn on Youtube
