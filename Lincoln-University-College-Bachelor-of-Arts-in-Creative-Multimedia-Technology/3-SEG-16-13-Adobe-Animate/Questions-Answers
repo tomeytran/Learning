@@ -1,0 +1,139 @@
+SEG 16-13 marks: 91%
+Section A: A-B-C-D question type, 20 total
+Section B (answer 8 out of 12 questions, from 21 to 28)
+21. What are the web and website?
+Answer: 
+The web, also known as the World Wide Web (WWW), is a system of interconnected
+documents and resources, accessed via the internet, that allows individuals, organizations, 
+and businesses to share information and connect with others. It encompasses all aspects of 
+human life, including business, education, entertainment, governance, personal life, health 
+and etc. 
+A website is a collection of related web pages, images, videos, or other digital assets that are
+addressed relative to a common Uniform Resource Locator (URL), often consisting of only the
+domain name, or the IP address, and the root path in an Internet Protocol-based network. In
+other words, a website is a collection of web pages that are hosted on a server and can be
+accessed via the internet using a web browser, such as Chrome, Edge or Safari.
+
+22. The HTML element is used to show a video on a web page. Explain the following:  <video
+width = “450” height= “320” control><source src=” animal.mp4” 
+</video>
+Answer:
+This code will display a video player on the web page with the specified dimensions and 
+controls, and will play the "animal.mp4" video file when the user clicks the play button:
+- The "width" and "height" attributes are used to set the dimensions of the video player on 
+the web page. In this case, the width is set to 450 pixels and the height is set to 320 pixels.
+- The "controls" attribute adds video controls, such as play, pause, and volume, to the video
+player.
+- The <source> element specifies the location of the video file to be played. In this case, the 
+video file is named "animal.mp4" and is located in the same directory as the HTML file.
+- The </video> tag is used to close the <video> element. It will be displayed in browsers that 
+do not support the <video> element.
+
+23. What is HTML plug ins? Explain what they are design to do?
+Answer:
+HTML plug-ins are computer programs that extend the standard functionality of a web 
+browser. They are typically installed as separate software components that work in 
+conjunction with the web browser to provide additional features and functionality, such as 
+running Java applets, displaying Flash movies, displaying maps, scanning for viruses, or 
+verifying a bank ID.  
+
+24. What is mean by animation?
+Answer: 
+Animation is a rapid display of a sequence of images of 2-D artwork or model 
+positions in order to create an illusion of movement. It is an optical illusion of motion due to 
+the phenomenon of persistence of vision.
+
+25.What is adobe animate? Adobe Animate interface consist of six panels, name them.
+Answer: 
+Adobe Animate is an authoring tool that allows you to design, animate, add interactivity and 
+publish for multiple platforms - including HTML5. Its interface consists of six panels: 
+- Stage panel
+- Tools panel
+- Timeline panel
+- Properties panel
+- Library panel
+- Assets panel
+
+26. What are the functions of tools panel? Tools panel divided into four area name and 
+explain them.
+Answer:
+The tools in the Tools panel let you draw, paint, select, and modify artwork, as well as change
+the view of the Stage. The Tools panel in Adobe Animate is divided into four sections: 
+- Stage panel: The tools area contains drawing, painting, and selection tools.
+- Tools panel: The view area contains tools for zooming and panning in the application 
+window.
+- Timeline panel: The colors area contains modifiers for stroke and fill colors.
+- Properties panel: The options area contains modifiers for the currently selected tool. 
+Modifiers affect the tool’s painting or editing operations
+27. Name and explain the major components of the Timeline.
+Answer: 
+The major components of the Timeline are: 
+- Layers: Layers in a document are listed in a column on the left side of the Timeline. 
+- Frames: Frames contained in each layer appear in a row to the right of the layer name. 
+- Timeline Header - The Timeline header at the top of the Timeline indicates frame numbers. 
+- Playhead - Playhead indicates the current frame displayed on the Stage. As a document 
+plays, the playhead moves from left to right through the Timeline. 
+By default, the playhead loops when it reaches the end. The timeline status displayed at the 
+bottom of the Timeline indicates the selected frame number, the current frame rate, and the
+elapsed time to the current frame.
+
+28. What is mean by frame and keyframe?
+Answer:
+Frames are segments of time in an animation that dictate movement and determine the 
+overall length of the animation. 
+Keyframes are frames in Adobe Animate where a new symbol instance appears in the 
+Timeline. They can also be frames that include ActionScript code to control some aspect of 
+the document.
+
+Section C (answer 4 out of 8 questions: 33, 34, 35, and 38)
+33. Explain the following panel in adobe animate: Stage, Timeline, and Property. 
+Answer: 
+- Stage panel: the rectangular area where you place graphic content when creating Animate
+documents. It represents the rectangular space in Flash Player or in a web browser window 
+where your document appears during playback. A default black outline represents the outline
+view of the stage.
+- Timeline panel: organizes and controls a document's content over time in layers and frames.
+Like a movie film, Animate documents divide lengths of time into frames. Layers are like
+multiple filmstrips stacked on top of one another, each containing a different image that 
+appears on the Stage.
+- Properties panel: provides easy access to the most commonly used attributes of the current
+selection, either on the Stage or in the Timeline. You can modify the object or document 
+attributes in the Property inspector without accessing the menus or panels that also control 
+these attributes. Depending on what is selected, the Property inspector displays information 
+and settings for the current document, text, symbol, shape, bitmap, video, group, frame, or 
+tool. When two or more different types of objects are selected, the Property inspector 
+displays the total number of objects selected.
+
+34. Adobe Animate provides a modernized Property Inspector with four tabs. Name and
+Explain them.
+Answer:  
+Animate 2020 release provides a modernized Property Inspector with four tabs as Tools, 
+Object, Frame and Doc. 
+- Tool: Indicates the current tool that is selected. If a tool does not have a valid PI, Doc PI is 
+shown, and Tool PI tab is disabled. This tab refers to the properties of the currently selected 
+tool. 
+- Object: Indicates the current object that is selected on stage. If no object is selected, this tab
+is disabled. This tab refers to the properties for the currently selected Object. 
+- Frame: Indicates the current frame that is selected in timeline. If no frame is selected, this 
+tab is disabled. This tab refers to the properties of the currently selected Frame. 
+- Doc - Indicates the current document you are working on. This tab outlines properties 
+specific to the currently opened document.
+
+Name and explain four types of animation technique. 
+Answer:
+
+38. Explain the following symbol types: Movie clip, Graphic, and Button
+Answer: 
+- Movie clip symbols are used to create reusable pieces of animation that have their own 
+independent timeline. They can contain interactive controls, sounds, and even other movie 
+clip instances 3. 
+- Graphic symbols are collections of frames used in animations or single frame mode. They
+are tied to the timeline of the document in which the symbol is placed. Use graphic symbols 
+for static images and to create reusable pieces of animation that are tied to the main 
+timeline. Interactive controls and sounds won’t work in a graphic symbol’s animation 
+sequence. Graphic symbols add less to the FLA file size than buttons or movie clips because 
+they have no timeline
+ - Button symbols are used to create interactive buttons that respond to user input. They can 
+contain up, over, down, and hit states, and can be used to trigger actions such as playing a 
+sound or navigating to a different part of the timeline. Button symbols can also contain movie
+clip instances to create animated buttons

@@ -1,0 +1,135 @@
+SEG 14-13 marks: 85%
+Section A: A-B-C-D question type, 20 total
+Section B (answer 8 out of 12 questions, from 21 to 28)
+21. What is the User Experience?
+Answer: 
+User Experience (UX) refers to the overall experience a person has when 
+interacting with a product or service, including their perceptions, emotions, and 
+responses to it. It encompasses all aspects of the end-user's interaction with a 
+company, its services or products, not only the usability and functionality but also 
+the sensory and emotional experience it provides.
+
+22. What is mean by Accessibility in interactive design?
+Answer: 
+Accessibility in interactive design refers to the degree to which an interactive 
+product is accessible by as many people as possible, regardless of their abilities or 
+disabilities. This can involve designing products with features such as alternative 
+text for images, closed captions for videos, or keyboard shortcuts for navigation.
+
+23. What is mean by Usability?
+Answer:
+Usability in interactive design refers to the degree to which an interactive product
+is easy to learn, effective to use, and enjoyable from the user's perspective.
+It involves optimizing the interactions people have with interactive products to
+enable them to carry out their activities at work, at school, and in their everyday
+lives.
+
+24. Usability is broken down into six goals, name them.
+Answer:
+- Effectiveness: How well the product does what it is supposed to do
+- Efficiency: How the product supports users in carrying out their tasks
+- Safety: How the product protects users from dangerous or undesirable 
+situations
+- Utility: How the product provides the right kind of functionality for users’ needs 
+or wants
+- Learnability: How easy it is to learn how to use the product
+- Memorability: How easy it is to remember how to use the product once learned
+
+25. .What are the interactive Design Principles?
+Answer:
+Design principles are used by interaction designers to aid their thinking when 
+designing for the user experience. They are generalizable abstractions intended to 
+orient designers towards thinking about different aspects of their designs and not 
+intended to specify how to design an actual interface.
+The most common interactive design principles include Visibility, Feedback, 
+Constraints, Consistency and Affordance.
+26. What is conceptualization in interaction design?
+Answer:
+Conceptualization in interaction design refers to the process of understanding and 
+defining the user experience goals and conceptual model of an interactive product 
+before committing to a particular interface design. It involves identifying and 
+examining the issues related to the user's needs, goals, and tasks, and developing 
+a clear understanding of how the product will meet those needs. 
+
+27. What Is Interaction Design?
+Answer:
+Interaction design is the process of designing interactive products that support 
+the way people communicate and interact in their everyday and working lives. It 
+involves creating user experiences that enhance and augment the way people 
+work, communicate, and interact. 
+The goal of interaction design is to optimize the interactions with a system, 
+environment, or product, so that they support and extend the users' activities in 
+effective, useful, and usable ways.
+
+28. What to design for interactive product?
+Answer:
+Designing interactive products requires considering who is going to be using them, 
+how they are going to be used, and where they are going to be used. 
+It’s important to understand the kind of activities people are doing when 
+interacting with the products. 
+
+Section C (answer 4 out of 8 questions, from 33 to 36)
+33. Name five most common principles of interactive design and explain them.
+Answer:
+- Visibility: refers to the system visibility to the user. How visible the function of 
+the system to the user. 
+- Feedback: involves sending back information about what action has been done and 
+what has been accomplished, allowing the person to continue with the activity. 
+-  Constraints: refers to determining ways of restricting the kinds of user 
+interaction that can take place at a given moment. 
+- Consistency: refers to designing interfaces to have similar operations and use 
+similar elements for achieving similar tasks. In particular, a consistent interface is 
+one that follows rules, such as using the same operation to select all objects. 
+- Affordance: refer to an attribute of an object that allows people to know how to
+use it
+
+34. The core components of the conceptual model 
+Answer:
+- Metaphors and analogies that convey to people how to understand what a 
+product is for and how to use it for an activity (e.g., browsing, bookmarking).
+- The concepts that people are exposed to through the product, including the 
+task–domain objects they create and manipulate, their attributes, and the
+operations that can be performed on them (e.g., saving, revisiting, organizing)
+- The relationships between those concepts (e.g., whether one object contains 
+another, the relative importance of actions to others, and whether an object 
+is part of another).
+- The mappings between the concepts and the user experience the product is 
+designed to support or invoke (e.g., one can revisit through looking at a list of 
+visited sites, most-frequently visited, or saved websites).
+
+35. The four types of interaction
+Answer:
+- Instructing: where users issue instructions to a system. This can be done in a 
+number of ways, including: typing in commands, selecting options from menus in a 
+windows environment or on a multitouch screen, speaking aloud commands, 
+gesturing, pressing buttons, or using a combination of function keys.2. 
+- Conversing: where users have a dialog with a system. Users can speak via an 
+interface or type in questions to which the system replies via text or speech 
+output.
+- Manipulating: where users interact with objects in a virtual or physical space by 
+manipulating them (e.g., opening, holding, closing, placing). Users can hone their 
+familiar knowledge of how to interact with objects.
+-  Exploring: where users move through a virtual environment or a physical space. 
+Virtual environments include 3D worlds, and augmented and virtual reality
+systems. They enable users to hone their familiar knowledge of physically moving 
+around. Physical spaces that use sensor-based technologies include smart rooms 
+and ambient environments, also enabling people to capitalize on familiarity.
+
+36. The five sources of inspiration and knowledge that used to inform design and 
+guide research are.
+Answer:
+- Paradigms: a paradigm refers to a general approach that has been adopted by a 
+community of researchers and designers for carrying out their work, in terms of 
+shared assumptions, concepts, values, and practices.
+- Vision: a vision is a future scenario that frames research and development in 
+interaction design – often depicted in the form of a film or a narrative.
+- Theory: a theory is a well-substantiated explanation of some aspect of a 
+phenomenon; for example, the theory of information processing that explains how 
+the mind, or some aspect of it, is assumed to work.
+- Model - A model is a simplification of some aspect of human–computer interaction 
+intended to make it easier for designers to predict and evaluate alternative 
+designs.
+- Framework - A framework is a set of interrelated concepts and/or a set of 
+specific questions that are intended to inform a particular domain area (e.g., 
+collaborative learning), online communities, or an analytic method (e.g., ethnographic
+studies).

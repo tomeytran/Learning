@@ -1,0 +1,165 @@
+ADF 242 marks: 87%
+Section A: A-B-C-D question type, 30 total
+Section B
+1. Describe DataAdapter, DataReader, DbCommand and DbConnection Objects with 
+appropriate examples. 
+Answer:
+- DataAdapter object: acts as a mediator between the DataSet object and the database, helps
+the Dataset to contain data from multiple databases or other data.
+Example using DataAdapter object: 
+```
+string connectionString = "Data Source=myServerAddress;
+Initial Catalog=myDataBase;
+User Id=myUsername;
+Password=myPassword;";
+string query = "SELECT * FROM Customers";
+SqlConnection connection = new SqlConnection(connectionString);
+SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+DataSet dataSet = new DataSet();
+adapter.Fill(dataSet, "Customers");
+```
+- DataReader Object: an alternative to the DataSet and DataAdapter combination, provides a
+connection oriented access to the data records in the database. These objects are suitable for
+read-only access, such as populating a list and then breaking the connection.
+Example using DataReader object:
+```
+string connectionString = "Data Source=myServerAddress;
+Initial Catalog=myDataBase;
+User Id=myUsername;
+Password=myPassword;";
+string query = "SELECT * FROM Customers";
+SqlConnection connection = new SqlConnection(connectionString);
+SqlCommand command = new SqlCommand(query, connection);
+connection.Open();
+SqlDataReader reader = command.ExecuteReader();
+while (reader.Read())
+{
+    Console.WriteLine(reader["CustomerID"].ToString() + " " + 
+    reader["CompanyName"].ToString());
+}
+reader.Close();
+connection.Close();
+```
+- DbCommand and DbConnection objects are used to execute commands and connect to the
+database, respectively. The DbConnection object represents a connection to the data source.
+The connection could be shared among different command objects. The DbCommand object
+represents the command or a stored procedure sent to the database for retrieving or 
+manipulating data. 
+Example using DbCommand and DbConnection objects:
+```
+string connectionString = "Data Source=myServerAddress;
+Initial Catalog=myDataBase;
+User Id=myUsername;
+Password=myPassword;";
+string query = "SELECT * FROM Customers";
+SqlConnection connection = new SqlConnection(connectionString);
+SqlCommand command = new SqlCommand(query, connection);
+connection.Open();
+SqlDataReader reader = command.ExecuteReader();
+while (reader.Read())
+{
+    Console.WriteLine(reader["CustomerID"].ToString() + " " + 
+    reader["CompanyName"].ToString());
+}
+reader.Close();
+connection.Close();
+```
+2. Highlight any 5 standard XML elements that are commonly used in the advertisement file.
+Answer:
+- Advertisements: Encloses the advertisement file. 
+- Ad: Delineates separate ad. 
+- ImageUrl: The path of image that will be displayed. 
+- NavigateUrl: The link that will be followed when the user clicks the ad. 
+- AlternateText The text that will be displayed instead of the picture if it cannot be displayed.
+
+3. Highlight the common properties of check boxes and radio buttons in ASP.NET
+Answer:
+- Text: The text displayed next to the check box or radio button. 
+- Checked: Specifies whether it is selected or not, default is false. 
+- GroupName: Name of the group the control belongs to.
+
+4. Describe the procedure to add Folders and Files to a Web project in ASP.NET
+Answer: 
+When a new web form is created, Visual Studio automatically generates the starting HTML for
+ the form and displays it in Source view of the web forms designer. The Solution Explorer is 
+used to add any other files, folders or any existing item on the web site. 
+- To add a standard folder, right-click on the project or folder under which you are going to 
+add the folder in the Solution Explorer and choose New Folder. 
+- To add an ASP.NET folder, right-click on the project in the Solution Explorer and select the 
+folder from the list. 
+- To add an existing item to the site, right-click on the project or folder under which you are 
+going to add the item in the Solution Explorer and select from the dialog box.
+
+5. What is Panel Control and how to implement it in an ASP.NET web project? 
+Answer:
+The Panel control is a container control in ASP.NET that can be used to group and organize 
+ther controls. It is derived from the WebControl class and inherits all its properties, methods,
+and events. To implement a Panel control in an ASP.NET web project, you can use the 
+following basic syntax:
+```
+<asp:Panel ID="Panel1" runat="server">
+    <!-- Add other controls here -->
+</asp:Panel>
+```
+You can then add other controls within the Panel control, and they will be grouped and 
+organized within it. The Panel control has several properties of its own, such as BackImageUrl,
+DefaultButton, and Direction, which can be used to customize its appearance and behavior.
+
+6. Discuss 5 web server security practices. 
+Answer:
+There are plenty of security practices individuals can set around web server use that can give
+a safer experience:
+- A reverse proxy, which is designed to hide an internal server and act as an intermediary for 
+traffic originating on an internal server. 
+- Access restriction through processes such as limiting the web host's access to infrastructure 
+machines or using Secure Socket Shell (SSH) 
+- Keeping web servers patched and up to date to help ensure the web server is not 
+susceptible to vulnerabilities 
+- Network monitoring to make sure there is no unauthorized activity 
+- Using a firewall and SSL as firewalls can monitor HTTP traffic while having a Secure Sockets 
+Layer (SSL) can help keep data secure.
+
+7. Explain the following types of IP addresses: private IP, public IP, static IP and dynamic IP. 
+Answer:
+- Private IP: used to identify devices on a local network and are not visible to the public. They
+are assigned by the router or gateway and are not unique because there are a limited number
+of devices on a network. 
+- Public IP: assigned by an internet service provider (ISP) and are visible to the public internet.
+They are used to identify a network or device on the internet and are unique for all users. 
+All private and public IP addresses can be either static or dynamic.
+- Static IP: manually configured and fixed to the network of your device, cannot change 
+automatically
+- Dynamic IP: configured automatically and assigned to your network by a Dynamic Host
+Configuration Protocol (DHCP) server and can be your internet router.
+ 
+8. Describe client-side scripts and client-side source code 
+Answer:
+- Client side scripts: ASP.NET client side runs on the browser and in turn speeds up the 
+execution of page. For example, client side data validation which can catch invalid data and 
+warn the user accordingly without making a round trip to the server. 
+- Client side source code: ASP.NET pages generate this. For example, the HTML source code of
+an ASP.NET page contains a number of hidden fields and automatically injected blocks of 
+JavaScript code, which keeps information like view state or does other jobs to make the page
+work.
+
+9. List the phases of ASP.NET page life cycle 
+Answer:
+- Initialization
+- Instantiation of the controls on the page
+- Restoration and maintenance of the state
+- Execution of the event handler codes
+- Page rendering
+
+10. Describe event handling as regards ASP.NET
+Answer:
+An event is an action or occurrence such as a mouse click, a key press, mouse movements, 
+or any system-generated notification. A process communicates through events. For 
+example, interrupts are system-generated events. When events occur, the application should 
+be able to respond to it and manage it.
+Events in ASP.NET raised at the client machine, and handled at the server machine. For 
+example, a user clicks a button displayed in the browser. A Click event is raised. The browser 
+handles thisclient-side event by posting it to the server. 
+The server has a subroutine describing what to do when the event is raised; it is called the 
+event-handler. Therefore, when the event message is transmitted to the server, it checks 
+whether the Click event has an associated event handler. If it has, the event handler is 
+executed.
