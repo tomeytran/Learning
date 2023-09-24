@@ -145,6 +145,7 @@ const checkDogs = function (dogJulia, dogKate) {
 };
 checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
 
+// Lab 12.2
 // Dữ liệu 1: [5, 2, 4, 1, 15, 8, 3]
 // Dữ liệu 2: [16, 6, 10, 5, 6, 1, 4]
 const calcAverageHumanAge = function (ages) {
@@ -154,6 +155,8 @@ const calcAverageHumanAge = function (ages) {
   // console.log(adults); // [36, 32, 76, 48, 28]
   // const averageHuman =
   //   adults.reduce((acc, age) => acc + age, 0) / adults.length; // 44
+
+  // Lab 12.3
   const averageHuman = ages
     .map(age => (age <= 2 ? 2 * age : 16 + age * 4))
     .filter(age => age >= 18)
