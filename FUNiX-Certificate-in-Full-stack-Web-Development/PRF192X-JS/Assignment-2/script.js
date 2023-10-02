@@ -1,50 +1,5 @@
-// "use strict";
-
-// SIDEBAR ANIMATION
-const sidebar = document.getElementById("sidebar");
-sidebar.onclick = function () {
-  sidebar.classList.toggle("active");
-};
-
-// LOCAL STORAGE
-
-// const submitBtn = document.getElementById("submit-btn");
-// submitBtn.addEventListener("click", (e) => {
-//   const petArr = JSON.parse(getFromStorage("petArr")) ?? [];
-//   e.prevenDefault();
-//   const inputId = document.getElementById("input-id");
-//   const inputName = document.getElementById("input-name");
-//   const inputAge = document.getElementById("input-age");
-//   const inputType = document.getElementById("input-type");
-//   const inputWeight = document.getElementById("input-weight");
-//   const inputLength = document.getElementById("input-length");
-//   const inputColor = document.getElementById("input-color-1");
-//   const inputBreed = document.getElementById("input-breed");
-//   const inputVaccinated = document.getElementById("input-vaccinated");
-//   const inputDewormed = document.getElementById("input-dewormed");
-//   const inputSterilized = document.getElementById("input-sterilized");
-
-//   petArr.push({
-//     inputId,
-//     inputName,
-//     inputAge,
-//     inputType,
-//     inputWeight,
-//     inputLength,
-//     inputColor,
-//     inputBreed,
-//     inputVaccinated,
-//     inputDewormed,
-//     inputSterilized,
-//   });
-
-//   saveToStorage("petArr", JSON.stringify(petArr));
-// });
-
-///////////////////////////////////////////////////////
-
-("use strict");
-
+"use strict";
+// SETUP
 const idInput = document.getElementById("input-id");
 const nameInput = document.getElementById("input-name");
 const typeInput = document.getElementById("input-type");
@@ -57,18 +12,18 @@ const vaccinatedInput = document.getElementById("input-vaccinated");
 const dewormedInput = document.getElementById("input-dewormed");
 const sterilizedInput = document.getElementById("input-sterilized");
 
-const petArr = [];
+const submitBtn = document.getElementById("submit-btn");
 const tableBodyEl = document.getElementById("tbody");
 const deleteBtn = document.querySelectorAll("btn-danger");
-/* SUBMIT */
-const submitBtn = document.getElementById("submit-btn");
-/* SHOW PET */
-let healthyCheck = true;
 const healthyBtn = document.getElementById("healthy-btn");
-/* CALCULATE BMI */
-// const bmiBtn = document.getElementById("bmi-btn");
 
-/* SUBMIT */
+renderTableData(petArr); // render sẵn data mẫu ở storage.js
+
+// SIDEBAR ANIMATION
+document.getElementById("sidebar-title").onclick = () =>
+  sidebar.classList.toggle("active");
+
+// SUBMIT & SAVE LOCAL STORAGE
 submitBtn.addEventListener("click", function () {
   const data = {
     id: idInput.value,
@@ -85,23 +40,16 @@ submitBtn.addEventListener("click", function () {
     // bmi: "?",
     date: new Date().toLocaleDateString("en-GB"),
   };
-
   const validate = validateData(data);
   if (validate) {
     petArr.push(data);
+    saveToStorage("petArr", petArr);
     renderTableData(petArr);
     clearInput();
   }
 });
 
-function saveToStorage(key, value) {
-  localStorage.setItem(key, value);
-}
-
-function getFromStorage(key, defaultVal) {
-  return localStorage.getItem(key) ?? defaultVal;
-}
-
+// VALIDATE  trước khi render
 function validateData(data) {
   let isValidated = true;
   if (data.id.trim() === "") {
@@ -161,48 +109,69 @@ function validateData(data) {
   return isValidated;
 }
 
+// RENDER
 function renderTableData(petArr) {
   tableBodyEl.innerHTML = "";
-  for (let i = 0; i < petArr.length; i++) {
+  petArr.forEach(function (petItem) {
     const row = document.createElement("tr");
     row.innerHTML = `
-      <th scope="row">${petArr[i].id}</th>
-      <td>${petArr[i].name}</td>
-      <td>${petArr[i].age}</td>
-      <td>${petArr[i].type}</td>
-      <td>${petArr[i].weight}</td>
-      <td>${petArr[i].lengthData}</td>
-      <td>${petArr[i].breed}</td>
-      <td>
-        <i class="bi bi-square-fill" style="color: ${petArr[i].color}"></i>
-      </td>
-      <td><i class="bi ${
-        petArr[i].vaccinated === true
-          ? "bi-check-circle-fill"
-          : "bi-x-circle-fill"
-      }"></i></td>
-      <td><i class="bi ${
-        petArr[i].dewormed === true
-          ? "bi-check-circle-fill"
-          : "bi-x-circle-fill"
-      }"></i></td>
-      <td><i class="bi ${
-        petArr[i].sterilized === true
-          ? "bi-check-circle-fill"
-          : "bi-x-circle-fill"
-      }"></i></td>      
-      <td>${petArr[i].date}</td>
-      <td>
-        <button onclick="deletePet('${
-          petArr[i].id
-        }')" type="button" class="btn btn-danger">Delete</button>
-      </td>
-      `;
+    <th scope="row">${petItem.id}</th>
+    <td>${petItem.name}</td>
+    <td>${petItem.age}</td>
+    <td>${petItem.type}</td>
+    <td>${petItem.weight}</td>
+    <td>${petItem.lengthData}</td>
+    <td>${petItem.breed}</td>
+    <td>
+      <i class="bi bi-square-fill" style="color: ${petItem.color}"></i>
+    </td>
+    <td><i class="bi ${
+      petItem.vaccinated === true ? "bi-check-circle-fill" : "bi-x-circle-fill"
+    }"></i></td>
+    <td><i class="bi ${
+      petItem.dewormed === true ? "bi-check-circle-fill" : "bi-x-circle-fill"
+    }"></i></td>
+    <td><i class="bi ${
+      petItem.sterilized === true ? "bi-check-circle-fill" : "bi-x-circle-fill"
+    }"></i></td>
+    <td>${petItem.date}</td>
+    <td>
+      <button onclick="deletePet('${
+        petItem.id
+      }')" type="button" class="btn btn-danger">Delete</button>
+    </td>
+    `;
     tableBodyEl.appendChild(row);
+  });
+  // for (let i = 0; i < petArr.length; i++) {
+
+  // }
+}
+
+// RENDER BREED
+typeInput.addEventListener("change", renderBreed);
+function renderBreed() {
+  breedInput.innerHTML = "<option>Select Breed</option>";
+  if (typeInput.value === "Dog") {
+    breedArr
+      .filter((breedItem) => breedItem.type === "Dog")
+      .forEach(function (breedItem) {
+        const option = document.createElement("option");
+        option.innerHTML = `${breedItem.breed}`;
+        breedInput.appendChild(option);
+      });
+  } else if (typeInput.value === "Cat") {
+    breedArr
+      .filter((breedItem) => breedItem.type === "Cat")
+      .forEach(function (breedItem) {
+        const option = document.createElement("option");
+        option.innerHTML = `${breedItem.breed}`;
+        breedInput.appendChild(option);
+      });
   }
 }
-// Bỏ tag tính BMI: <td>${petArr[i].bmi}</td>
 
+// CLEAR FORM  sau khi render
 function clearInput() {
   idInput.value = "";
   nameInput.value = "";
@@ -217,13 +186,15 @@ function clearInput() {
   sterilizedInput.checked = false;
 }
 
-function deletePet(petId) {
+// DELETE & UPDATE LOCAL STORAGE
+function deletePet(petItemId) {
   const isDeleted = confirm("Are you sure?");
   if (isDeleted) {
     for (let i = 0; i < petArr.length; i++) {
-      if (petId === petArr[i].id) {
+      if (petItemId === petArr[i].id) {
         // document.getElementById("tbody").deleteRow(i);
         petArr.splice(i, 1);
+        saveToStorage("petArr", petArr);
         renderTableData(petArr);
       }
     }
@@ -231,7 +202,8 @@ function deletePet(petId) {
   renderTableData(petArr);
 }
 
-/* SHOW PET */
+// HEALTHY PET
+let healthyCheck = true;
 healthyBtn.addEventListener("click", function () {
   if (healthyCheck === true) {
     const healthyPetArr = [];
@@ -251,14 +223,3 @@ healthyBtn.addEventListener("click", function () {
     healthyCheck = true;
   }
 });
-
-/* CALCULATE BMI */
-// bmiBtn.addEventListener("click", function () {
-//   for (let i = 0; i < petArr.length; i++) {
-//     petArr[i].bmi =
-//       petArr[i].type === "Dog"
-//         ? ((petArr[i].weight * 703) / petArr[i].lengthData ** 2).toFixed(2)
-//         : ((petArr[i].weight * 886) / petArr[i].lengthData ** 2).toFixed(2);
-//   }
-//   renderTableData(petArr);
-// });
