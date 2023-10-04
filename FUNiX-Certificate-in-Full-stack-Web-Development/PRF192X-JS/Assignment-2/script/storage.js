@@ -1,6 +1,6 @@
 "use strict";
 
-// MOCK DATA
+// SETUP - MOCK DATA IN LOCAL STORAGE
 const data1 = {
   id: "P001",
   name: "Tom",
@@ -46,7 +46,6 @@ const breed3 = {
   type: "Cat",
 };
 
-// SETUP MOCK DATA IN LOCAL STORAGE
 // Chỉ khi localStorage không còn gì, reload sẽ hiện Mock Data
 if (!getFromStorage("petArr")) {
   saveToStorage("petArr", [data1, data2]);

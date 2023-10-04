@@ -46,7 +46,6 @@ submitBtn.addEventListener("click", function () {
     const index = petArr.findIndex((pet) => pet.id === data.id);
     petArr[index] = data;
     saveToStorage("petArr", petArr);
-    // data.date = petArr[index].date;
     openForm.classList.add("hide");
     renderTableData(petArr);
   }
@@ -140,29 +139,8 @@ function renderTableData(petArr) {
   });
 }
 
-// EDIT
-function startEditPet(id) {
-  openForm.classList.remove("hide");
-
-  const pet = petArr.find((petItem) => petItem.id === id);
-  idInput.value = id;
-  nameInput.value = pet.name;
-  ageInput.value = pet.age;
-  typeInput.value = pet.type;
-  weightInput.value = pet.weight;
-  lengthInput.value = pet.lengthData;
-  colorInput.value = pet.color;
-  breedInput.value = pet.breed;
-  vaccinatedInput.checked = pet.vaccinated;
-  dewormedInput.checked = pet.dewormed;
-  sterilizedInput.checked = pet.sterilized;
-
-  renderBreed();
-  breedInput.value = `${pet.breed}`;
-}
-
+// RENDER BREED
 typeInput.addEventListener("change", renderBreed);
-
 function renderBreed() {
   breedInput.innerHTML = "<option>Select Breed</option>";
   if (typeInput.value === "Dog") {
@@ -182,4 +160,25 @@ function renderBreed() {
         breedInput.appendChild(option);
       });
   }
+}
+
+// EDIT
+function startEditPet(id) {
+  openForm.classList.remove("hide");
+
+  const pet = petArr.find((petItem) => petItem.id === id);
+  idInput.value = id;
+  nameInput.value = pet.name;
+  ageInput.value = pet.age;
+  typeInput.value = pet.type;
+  weightInput.value = pet.weight;
+  lengthInput.value = pet.lengthData;
+  colorInput.value = pet.color;
+  breedInput.value = pet.breed;
+  vaccinatedInput.checked = pet.vaccinated;
+  dewormedInput.checked = pet.dewormed;
+  sterilizedInput.checked = pet.sterilized;
+
+  renderBreed();
+  breedInput.value = `${pet.breed}`;
 }

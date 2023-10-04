@@ -6,9 +6,12 @@ const typeBreed = document.getElementById("breed-type");
 const submitBtn = document.getElementById("submit-btn");
 const tableBodyEl = document.getElementById("tbody");
 const deleteBtn = document.querySelectorAll("btn-danger");
+
+renderTableBreed(breedArr); // render trước data mẫu ở storage.js
+
+// SIDEBAR ANIMATION
 document.getElementById("sidebar-title").onclick = () =>
   sidebar.classList.toggle("active");
-renderTableBreed(breedArr); // render trước data mẫu ở storage.js
 
 // SUBMIT & SAVE LOCAL STORAGE
 submitBtn.addEventListener("click", function () {

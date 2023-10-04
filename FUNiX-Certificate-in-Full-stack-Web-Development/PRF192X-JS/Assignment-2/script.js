@@ -37,15 +37,14 @@ submitBtn.addEventListener("click", function () {
     vaccinated: vaccinatedInput.checked,
     dewormed: dewormedInput.checked,
     sterilized: sterilizedInput.checked,
-    // bmi: "?",
     date: new Date().toLocaleDateString("en-GB"),
   };
   const validate = validateData(data);
   if (validate) {
-    petArr.push(data);
+    petArr.push(data); // lưu data cùng data mẫu ở storage.js, chung localStorage
     saveToStorage("petArr", petArr);
     renderTableData(petArr);
-    clearInput();
+    clearInput(); // clear form sau khi render
   }
 });
 
@@ -60,15 +59,15 @@ function validateData(data) {
     alert("Please input name");
     isValidated = false;
   }
-  if (isNaN(data.age) === "") {
+  if (isNaN(data.age)) {
     alert("Please input age");
     isValidated = false;
   }
-  if (isNaN(data.weight) === "") {
+  if (isNaN(data.weight)) {
     alert("Please input weight");
     isValidated = false;
   }
-  if (isNaN(data.lengthData) === "") {
+  if (isNaN(data.lengthData)) {
     alert("Please input length");
     isValidated = false;
   }
@@ -107,7 +106,7 @@ function validateData(data) {
   }
 
   return isValidated;
-}
+} // như Asm 1
 
 // RENDER
 function renderTableData(petArr) {
@@ -143,16 +142,15 @@ function renderTableData(petArr) {
     `;
     tableBodyEl.appendChild(row);
   });
-  // for (let i = 0; i < petArr.length; i++) {
-
-  // }
-}
+} // như Asm 1
 
 // RENDER BREED
 typeInput.addEventListener("change", renderBreed);
 function renderBreed() {
+  // Khi Select Type thay đổi (change) thì default trạng thái Select Breed
   breedInput.innerHTML = "<option>Select Breed</option>";
   if (typeInput.value === "Dog") {
+    //  Select Type = Dog thì data mẫu của BreedArr filter ra breed cùng thuộc Dog, hiện ra khi Select Breed
     breedArr
       .filter((breedItem) => breedItem.type === "Dog")
       .forEach(function (breedItem) {
@@ -161,6 +159,7 @@ function renderBreed() {
         breedInput.appendChild(option);
       });
   } else if (typeInput.value === "Cat") {
+    // tương tự với Cat
     breedArr
       .filter((breedItem) => breedItem.type === "Cat")
       .forEach(function (breedItem) {
@@ -184,7 +183,7 @@ function clearInput() {
   vaccinatedInput.checked = false;
   dewormedInput.checked = false;
   sterilizedInput.checked = false;
-}
+} // như Asm 1
 
 // DELETE & UPDATE LOCAL STORAGE
 function deletePet(petItemId) {
@@ -192,8 +191,8 @@ function deletePet(petItemId) {
   if (isDeleted) {
     for (let i = 0; i < petArr.length; i++) {
       if (petItemId === petArr[i].id) {
-        // document.getElementById("tbody").deleteRow(i);
         petArr.splice(i, 1);
+        // Thêm saveToStorage để update lại sau khi xoá
         saveToStorage("petArr", petArr);
         renderTableData(petArr);
       }
@@ -222,4 +221,19 @@ healthyBtn.addEventListener("click", function () {
     healthyBtn.textContent = "Show Healthy Pet";
     healthyCheck = true;
   }
-});
+}); // như Asm 1
+
+////////////////////////////////////////////////////////////////
+/* 
+Cấu trúc các file JS thường theo trình tự: 
+1. Setup inputs & buttons 
+2. Render data mẫu từ storage.js 
+3. Sidebar animation
+4. Submit/Find button
+5. Function liên quan:
+  + Validate
+  + Render, Render Breed
+  + Clear form sau khi render 
+6. Delete/Edit button 
+7. Healthy pet button 
+*/
