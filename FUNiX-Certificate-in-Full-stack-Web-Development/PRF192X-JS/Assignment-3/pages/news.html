@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>News App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+	<div class="wrapper d-flex align-items-stretch">
+		<nav id="sidebar">
+			<h1><a href="../index.html" class="logo">News App</a></h1>
+			<ul class="list-unstyled components mb-5">
+				<li class="">
+					<a href="../index.html"><span class="fa fa-home mr-3"></span> Home</a>
+				</li>
+				<li class="active">
+					<a href="./news.html"><span class="fa fa-newspaper-o mr-3"></span> News</a>
+				</li>
+				<li>
+					<a href="./todo.html"><span class="fa fa-list mr-3"></span> Todo List</a>
+				</li>
+				<li>
+					<a href="./setting.html"><span class="fa fa-cogs mr-3"></span> Settings</a>
+				</li>
+			</ul>
+
+		</nav>
+
+		<!-- Page Content  -->
+		<div id="content" class="p-4 p-md-5 pt-5">
+			<h2 class="mb-4">News</h2>
+			<nav aria-label="Page navigation example">
+				<ul class="pagination justify-content-center">
+					<li class="page-item">
+						<button class="page-link" href="#" id="btn-prev">Previous</button>
+					</li>
+					<li class="page-item disabled">
+						<a class="page-link" id="page-num">1</a>
+					</li>
+					<li class="page-item">
+						<button class="page-link" id="btn-next">Next</button>
+					</li>
+				</ul>
+			</nav>
+
+			<!-- News list -->
+			<div id="news-container">
+				<div class="card flex-row flex-wrap">
+					<div class="card mb-3" style="">
+						<div class="row no-gutters">
+							<div class="col-md-4">
+								<img src="https://techcrunch.com/wp-content/uploads/2022/06/m1-chip-apple.jpg?w=603"
+									class="card-img"
+									alt="MIT researchers uncover ‘unpatchable’ flaw in Apple M1 chips - TechCrunch">
+							</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<h5 class="card-title">MIT researchers uncover ‘unpatchable’ flaw in Apple M1 chips
+										- TechCrunch</h5>
+									<p class="card-text">Apple’s M1 chips&nbsp;have an “unpatchable” hardware
+										vulnerability that could allow attackers to break through its last line of
+										security defenses, MIT researchers have discovered. The vulnerability lies in a
+										hardware-level security mechanism utilized in Apple M1 c…</p>
+									<a href="https://techcrunch.com/2022/06/10/apple-m1-unpatchable-flaw/"
+										class="btn btn-primary">View</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card flex-row flex-wrap">
+					<div class="card mb-3" style="">
+						<div class="row no-gutters">
+							<div class="col-md-4">
+								<img src="https://i.ytimg.com/vi/PwYq5DVA85M/hqdefault.jpg" class="card-img"
+									alt="PS5, XSX: Where Are All the Next-Gen Games? - Next-Gen Console Watch - IGN">
+							</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<h5 class="card-title">PS5, XSX: Where Are All the Next-Gen Games? - Next-Gen
+										Console Watch - IGN</h5>
+									<p class="card-text">Welcome back to Next-Gen Console Watch, our show following all
+										the news and rumors on the PlayStation 5, Xbox Series X, and Series S. I’m
+										Daemon Hatfield, an...</p>
+									<a href="https://www.youtube.com/watch?v=PwYq5DVA85M"
+										class="btn btn-primary">View</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card flex-row flex-wrap">
+					<div class="card mb-3" style="">
+						<div class="row no-gutters">
+							<div class="col-md-4">
+								<img src="https://cdn.vox-cdn.com/thumbor/Cf87wqZvenLCVNW8YVtASQdATCI=/0x146:2040x1214/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/23617333/acastro_220609_5242_0001.jpg"
+									class="card-img"
+									alt="Firefox and Chrome are squaring off over ad-blocker extensions - The Verge">
+							</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<h5 class="card-title">Firefox and Chrome are squaring off over ad-blocker
+										extensions - The Verge</h5>
+									<p class="card-text">Mozilla, the makers of the Firefox browser, has said that ad
+										blocking at the network level will be supported in its implementation of the
+										Manifest V3 standard, drawing a contrast with Google Chrome.</p>
+									<a href="https://www.theverge.com/2022/6/10/23131029/mozilla-ad-blocking-firefox-google-chrome-privacy-manifest-v3-web-request"
+										class="btn btn-primary">View</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="../models/User.js"></script>
+	<script src="../scripts//storage.js"></script>
+	<script src="../scripts/news.js"></script>
+</body>
+
+</html>

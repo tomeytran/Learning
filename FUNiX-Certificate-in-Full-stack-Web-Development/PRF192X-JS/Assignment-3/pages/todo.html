@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>News App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+	<div class="wrapper d-flex align-items-stretch">
+		<nav id="sidebar">
+			<h1><a href="../index.html" class="logo">News App</a></h1>
+			<ul class="list-unstyled components mb-5">
+				<li class="">
+					<a href="../index.html"><span class="fa fa-home mr-3"></span> Home</a>
+				</li>
+				<li class="">
+					<a href="./news.html"><span class="fa fa-newspaper-o mr-3"></span> News</a>
+				</li>
+				<li class="active">
+					<a href="./todo.html"><span class="fa fa-list mr-3"></span> Todo List</a>
+				</li>
+				<li>
+					<a href="./setting.html"><span class="fa fa-cogs mr-3"></span> Settings</a>
+				</li>
+			</ul>
+
+		</nav>
+
+		<!-- Page Content  -->
+		<div id="content" class="p-4 p-md-5 pt-5">
+			<h2 class="mb-4">Todo List</h2>
+			<!-- Todo List -->
+			<div id="todo-container">
+				<div class="todo-list-header">
+					<input type="text" placeholder="Title..." id="input-task">
+					<span id="btn-add">Add</span>
+				</div>
+				<ul id="todo-list">
+					<li>
+						Hit the gym
+						<span class="close">×</span>
+					</li>
+					<li class="checked">Pay bills<span class="close">×</span></li>
+					<li>Meet George<span class="close">×</span></li>
+					<li>Buy eggs<span class="close">×</span></li>
+					<li>Read a book<span class="close">×</span></li>
+					<li>Organize office<span class="close">×</span></li>
+					<li>Meet George<span class="close">×</span></li>
+					<li>Buy eggs<span class="close">×</span></li>
+					<li>Read a book<span class="close">×</span></li>
+					<li>Organize office<span class="close">×</span></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+
+	<script src="../models/User.js"></script>
+	<script src="../scripts//storage.js"></script>
+	<script src="../scripts/todo.js"></script>
+</body>
+
+</html>

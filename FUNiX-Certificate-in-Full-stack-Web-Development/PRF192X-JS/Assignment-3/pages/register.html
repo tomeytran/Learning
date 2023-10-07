@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Register</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+	<div class="wrapper d-flex align-items-stretch">
+		<nav id="sidebar">
+			<h1><a href="index.html" class="logo">News App</a></h1>
+			<ul class="list-unstyled components mb-5">
+				<li class="active">
+					<a href="../index.html"><span class="fa fa-home mr-3"></span> Home</a>
+				</li>
+				<li class="">
+					<a href="#"><span class="fa fa-newspaper-o mr-3"></span> News</a>
+				</li>
+				<li>
+					<a href="#"><span class="fa fa-list mr-3"></span> Todo List</a>
+				</li>
+				<li>
+					<a href="#"><span class="fa fa-cogs mr-3"></span> Settings</a>
+				</li>
+			</ul>
+
+		</nav>
+
+		<!-- Page Content  -->
+		<div id="content" class="p-4 p-md-5 pt-5">
+			<h2 class="mb-4">Register New User</h2>
+			<div class="container" id="main" style="max-width: 90%;">
+				<div class="row justify-content-center align-items-center mt-4">
+					<div class="col-lg-6 col-lg-offset-4">
+						<form>
+							<div class="form-group row mb-3">
+								<label for="input-id" class="col-sm-3 col-form-label">First Name</label>
+								<div class="col-sm-3">
+									<input type="text" class="form-control" id="input-firstname" placeholder="Input First Name">
+								</div>
+								<label for="input-id" class="col-sm-3 col-form-label" style="text-align: right;">Last Name</label>
+								<div class="col-sm-3">
+									<input type="text" class="form-control" id="input-lastname" placeholder="Input Last Name">
+								</div>
+							</div>
+							<div class="form-group row mb-3">
+								<label for="input-id" class="col-sm-3 col-form-label">Username</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="input-username" placeholder="Input Username">
+								</div>
+							</div>
+							<div class="form-group row mb-3">
+								<label for="input-name" class="col-sm-3 col-form-label">Password</label>
+								<div class="col-sm-9">
+									<input type="password" class="form-control" id="input-password" placeholder="Input Password">
+								</div>
+							</div>
+							<div class="form-group row mb-3">
+								<label for="input-name" class="col-sm-3 col-form-label">Confirm Password</label>
+								<div class="col-sm-9">
+									<input type="password" class="form-control" id="input-password-confirm" placeholder="Input Password">
+								</div>
+							</div>
+							<button type="button" class="btn btn-primary" id="btn-submit">Register</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../models/User.js"></script>
+	<script src="../scripts/storage.js"></script>
+	<script src="../scripts/register.js"></script>
+</body>
+
+</html>
