@@ -44,4 +44,20 @@ class CarCl {
 
 const ford = new CarCl("Ford", 120);
 console.log(ford.speedUS);
-ford.speedUS(160);
+ford.speedUS = 160;
+console.log(ford);
+
+//////////////////////
+function Animal(age) {
+  this.name = "html";
+  this.age = age;
+  this.showAge = function () {
+    console.log("age: ", this.age);
+  };
+}
+
+Animal.prototype.calcAge = function () {
+  return this.age;
+};
+const animal = new Animal(17);
+console.log(animal);
